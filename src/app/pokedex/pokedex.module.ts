@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { ListComponent } from './list/list.component';
 import { InformationComponent } from './information/information.component';
-
+import { PokeapiService } from './pokeapi.service';
 
 @NgModule({
   imports: [
@@ -18,6 +18,9 @@ import { InformationComponent } from './information/information.component';
   declarations: [
     ListComponent,
     InformationComponent
+  ],
+  providers: [
+    PokeapiService
   ]
 })
 export class PokedexModule { }
