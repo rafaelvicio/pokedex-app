@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ListComponent } from './pokedex/list/list.component';
-import { InformationComponent } from './pokedex/information/information.component';
+import { PokedexModule } from './pokedex/pokedex.module';
+import { RollOnScrollDirective } from './roll-on-scroll.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    InformationComponent
+    RollOnScrollDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    PokedexModule
   ],
   providers: [],
   bootstrap: [AppComponent]
