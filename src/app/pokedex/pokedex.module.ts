@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { ListComponent } from './list/list.component';
 import { InformationComponent } from './information/information.component';
 import { PokeapiService } from './pokeapi.service';
+import { PokedexRoutingModule } from './pokedex.routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    PokedexRoutingModule
   ],
   exports: [
     ListComponent,

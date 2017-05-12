@@ -1,7 +1,7 @@
 <input [(ngModel)]="nameFilter" type="text" id="poke-filter" placeholder="Search" maxlength="20" />
 
 <ul class="poke-list" >
-  <a *ngFor="let pokemon of filterByName()">
+  <a routerLink="/{{pokemon.number | number:'3.0-0'}}" *ngFor="let pokemon of filterByName()">
     <li class="poke-list-item" >
       <img src="//serebii.net/pokedex-xy/icon/{{ pokemon.number | number:'3.0-0' }}.png" />
       <span>{{ pokemon.number | number:'3.0-0' }} - {{ pokemon.name }}</span>

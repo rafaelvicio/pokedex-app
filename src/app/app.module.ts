@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PokedexModule } from './pokedex/pokedex.module';
 import { RollOnScrollDirective } from './roll-on-scroll.directive';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RollOnScrollDirective } from './roll-on-scroll.directive';
     BrowserModule,
     FormsModule,
     HttpModule,
+    AppRoutingModule,
     PokedexModule
   ],
   providers: [],
