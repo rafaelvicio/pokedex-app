@@ -4,7 +4,7 @@
   <a *ngFor="let pokemon of filterByName()">
     <li class="poke-list-item" >
       <img src="//serebii.net/pokedex-xy/icon/{{ pokemon.number | number:'3.0-0' }}.png" />
-      <span>{{ pokemon.number  | number '3.0-0' }} - {{ pokemon.name }}</span>
+      <span>{{ pokemon.number | number:'3.0-0' }} - {{ pokemon.name }}</span>
     </li>
   </a>
 </ul>

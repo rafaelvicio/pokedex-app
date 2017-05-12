@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PokeapiService } from '../pokeapi.service';
+import { Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-information',
@@ -15,13 +16,18 @@ export class InformationComponent implements OnInit {
   constructor(private PokeapiService: PokeapiService) { }
 
   ngOnInit() {
-    this.pokemonNumber = 1;
+    this.pokemonNumber = 386;
     this.getPokemon();
   }
 
   getPokemon() {
     if (typeof this.pokemonNumber === 'number') {
-      this.pokemon = this.PokeapiService.getPokemon(this.pokemonNumber);
+      this.PokeapiService.getPokemon(this.pokemonNumber)
+        .subscribe( response => {
+          this.pokemon = response;
+        });
+
+      //this.pokemon = this.PokeapiService.getPokemon(this.pokemonNumber);
     }else {
       //////
     }
